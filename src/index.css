@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +9,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.asdf {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.nav-item .dropdown-item {
+  color: #000000;
+}
+
+.nav-item .dropdown-item:hover {
+  background: #E1E1E1;
+}
+
+#nav-dropdown{
+    color: white;
+}
+
+.col-sm-4 {
+  padding-top: 2%;
 }
