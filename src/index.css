@@ -4,15 +4,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-.asdf {
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .nav-item .dropdown-item {
@@ -27,6 +24,16 @@ code {
     color: white;
 }
 
-.col-sm-4 {
+#productandcard {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#cart {
+  padding-left: 65%;
+  background-color: red;
+}
+
+#carCard {
   padding-top: 2%;
 }
