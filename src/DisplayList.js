@@ -16,18 +16,16 @@ class DisplayList extends Component {
 
     (<div id="productandcard">
       <Row>
-        <Col sm={7}><p> No more cars, dumbass! </p></Col>
-        <Col sm={5}></Col>
+        <Col xs={8}><p> No more cars, dumbass! </p></Col>
+        <Col xs={4}></Col>
       </Row>
     </div>):
 
     (
       <div id="productandcard">
         <Row>
-          <Col sm={7}><ProductDisplay list={this.props.list} updateCart={this.props.updateCart}/></Col>
-          <Col sm={5}>
-          {this.props.total}
-          </Col>
+          <Col xs={8}><ProductDisplay list={this.props.list} updateCart={this.props.updateCart}/></Col>
+          <Col xs={4}><Cart list={this.props.list} updateCart={this.props.updateCart}/></Col>
         </Row>
       </div>
     ))
@@ -39,7 +37,7 @@ class ProductDisplay extends Component {
     return(
       <div className="row">
         {this.props.list.map(item =>
-          <div className="col-sm-12 col-md-6 carCard">
+          <div className="col-md-6 col-lg-4" id="carCard">
         <Card>
           <Card.Img src={item.imgID} id="productImg"/>
           <Card.Body>
@@ -50,7 +48,7 @@ class ProductDisplay extends Component {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="primary" onClick={() => this.props.updateCart(1,1)}>Add to Cart</Button>
+            <Button variant="primary" onClick={() => this.props.updateCart(item.cartID,1)}>Add to Cart</Button>
           </Card.Footer>
         </Card>
         </div>
@@ -63,16 +61,15 @@ class ProductDisplay extends Component {
 class Cart extends Component {
   render() {
     return(
-      <div class="row">
+      <div class="row" id="cart">
         {this.props.list.map(item =>
-          <div class="col-sm-12 col-md-6" id="carCard">
+          <div class="col-xs-12 col-md-6" id="carCard">
         <Card>
           <Card.Img src={item.imgID} id="productImg"/>
           <Card.Body>
             <Card.Title>{item.brand + " " + item.model} </Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
+              hi.
             </Card.Text>
           </Card.Body>
           <Card.Footer>

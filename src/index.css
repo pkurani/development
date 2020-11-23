@@ -27,13 +27,14 @@ code {
 #productandcard {
   padding-left: 2%;
   padding-right: 2%;
+  padding-top: 2%
 }
 
 #cart {
-  padding-left: 65%;
   background-color: red;
+  padding-top: 2%;
 }
 
 #carCard {
-  padding-top: 2%;
+  padding-bottom: 2%;
 }

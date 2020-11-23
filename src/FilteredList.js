@@ -82,11 +82,16 @@ class FilteredList extends React.Component {
     console.log(this.state.cart);
     if (addOrRemove === 0 && this.state.cart[index] > 0){
       this.state.cart[index] = this.state.cart[index] - 1;
-      this.state.cartTotal = this.state.cartTotal - this.props.list[index].price
+      this.state.cartTotal = this.state.cartTotal - this.props.list[index].price;
     } else{
       this.state.cart[index] = this.state.cart[index] + 1;
-      this.state.cartTotal = this.state.cartTotal + this.props.list[index].price
+      this.state.cartTotal = this.state.cartTotal + this.props.list[index].price;
     }
+    this.setState({
+  		cartTotal: this.state.cartTotal,
+      cart: this.state.cart
+  	});
+
   }
 
   render() {
