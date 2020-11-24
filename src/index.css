@@ -24,17 +24,46 @@ code {
     color: white;
 }
 
-#productandcard {
+#productandcard, #headboard {
   padding-left: 2%;
   padding-right: 2%;
-  padding-top: 2%
+}
+
+#headboard, #removeFromCart {
+  padding-top: 1%;
 }
 
 #cart {
-  background-color: red;
-  padding-top: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 2%;
 }
 
 #carCard {
   padding-bottom: 2%;
+}
+
+#center {
+  justify-content: center;
+  text-align: center;
+}
+
+#quantity{
+  padding-top: 0.4em;
+  padding-left: 0.35em;
+  padding-right: 0.35em;
+}
+
+.bodyText, .list-group-item{
+  text-align: left;
+}
+
+#cartHeading{
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.secondaryColor, .card-footer, .jumbotron {
+  background-color:#e9ecef;
 }
