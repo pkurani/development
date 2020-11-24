@@ -27,7 +27,7 @@ class DisplayList extends Component {
       <div id="productandcard">
         <Row>
           <Col xs={8}><ProductDisplay list={this.props.list} updateCart={this.props.updateCart}/></Col>
-          <Col xs={4}><Cart list={this.props.list} updateCart={this.props.updateCart} cart={this.props.cart} total={this.props.total}/></Col>
+          <Col xs={4}><Cart allCars={this.props.allCars} updateCart={this.props.updateCart} cart={this.props.cart} total={this.props.total}/></Col>
         </Row>
       </div>
     ))
@@ -71,7 +71,7 @@ class Cart extends Component {
       <div className="rounded secondaryColor p-3 mb-2 text-dark" >
         <h1>Cart</h1>
         <div class ="list-group" id="cart">
-          {this.props.list.filter(i => (this.props.cart[i.cartID] > 0)).map(item =>
+          {this.props.allCars.filter(i => (this.props.cart[i.cartID] > 0)).map(item =>
             <ListGroup.Item>
             <div className="d-flex w-100 justify-content-between">
               <h5 className="mb-1">{item.brand + " " + item.model}</h5>

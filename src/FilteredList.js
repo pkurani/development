@@ -124,7 +124,7 @@ class FilteredList extends React.Component {
               </Jumbotron>
           </div>
 
-          <DisplayList list={fandsProducts} updateCart={this.updateCart} cart={this.state.cart} total={this.state.cartTotal}/>
+          <DisplayList list={fandsProducts} allCars={this.props.list} updateCart={this.updateCart} cart={this.state.cart} total={this.state.cartTotal}/>
 
           </div>
         )
