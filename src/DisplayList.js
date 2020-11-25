@@ -19,7 +19,7 @@ class DisplayList extends Component {
     (<div id="productandcard">
       <Row>
         <Col xs={8}><p> No more cars, dumbass! </p></Col>
-        <Col xs={4}></Col>
+        <Col xs={4}><Cart allCars={this.props.allCars} updateCart={this.props.updateCart} cart={this.props.cart} total={this.props.total}/></Col>
       </Row>
     </div>):
 
