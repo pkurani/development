@@ -114,11 +114,9 @@ class FilteredList extends React.Component {
           <div id="headboard">
             <Jumbotron>
                 <Container>
-                  <h1>Fluid jumbotron</h1>
+                  <h1>Cool Cars</h1>
                   <p>
-                    This is a modified jumbotron that occupies the entire horizontal space of
-                    its parent.
-                    {this.state.type}
+                    Here are some cool cars that I am selling! Feel free to filter by Car Type and Car Brand, and sort by price to truly find the car that suits your needs :)
                   </p>
                 </Container>
               </Jumbotron>
