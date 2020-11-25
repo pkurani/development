@@ -108,7 +108,6 @@ class FilteredList extends React.Component {
     const fandsProducts = this.sortBy(this.props.list.filter(this.matchesFilterSize).filter(this.matchesCarBrand), this.state.sorted)
         return (
           <div>
-
           <TopHeaderBar  type={this.state.type} brand={this.state.brand} sorted={this.state.sorted} onSelectFilterSize={this.onSelectFilterSize} onSelectCarBrand={this.onSelectCarBrand} onSelectSorted={this.onSelectSorted} />
 
           <div id="headboard">
@@ -121,9 +120,7 @@ class FilteredList extends React.Component {
                 </Container>
               </Jumbotron>
           </div>
-
           <DisplayList list={fandsProducts} allCars={this.props.list} updateCart={this.updateCart} cart={this.state.cart} total={this.state.cartTotal}/>
-
           </div>
         )
   }
