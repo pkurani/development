@@ -1,69 +1,70 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .nav-item .dropdown-item {
-  color: #000000;
+	color: #000000;
 }
 
 .nav-item .dropdown-item:hover {
-  background: #E1E1E1;
+	background: #E1E1E1;
 }
 
-#nav-dropdown{
-    color: white;
+#nav-dropdown {
+	color: white;
 }
 
-#productandcard, #headboard {
-  padding-left: 2%;
-  padding-right: 2%;
+#productandcard,
+#headboard {
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
-#headboard, #removeFromCart {
-  padding-top: 1%;
+#headboard,
+#removeFromCart {
+	padding-top: 1%;
 }
 
 #cart {
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 2%;
 }
 
 #carCard {
-  padding-bottom: 2%;
+	padding-bottom: 2%;
 }
 
 #center {
-  justify-content: center;
-  text-align: center;
+	justify-content: center;
+	text-align: center;
 }
 
-#quantity{
-  padding-top: 0.4em;
-  padding-left: 0.35em;
-  padding-right: 0.35em;
+#quantity {
+	padding-top: 0.4em;
+	padding-left: 0.35em;
+	padding-right: 0.35em;
 }
 
-.bodyText, .list-group-item{
-  text-align: left;
+.bodyText,
+.list-group-item {
+	text-align: left;
 }
 
-#cartHeading{
-  color: white;
-  padding-top: 2%;
-  padding-bottom: 2%;
+#cartHeading {
+	color: white;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
-.secondaryColor, .card-footer, .jumbotron {
-  background-color:#e9ecef;
+.secondaryColor,
+.card-footer,
+.jumbotron {
+	background-color: #e9ecef;
 }
