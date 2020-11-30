@@ -86,7 +86,6 @@ class CheckoutButton extends Component {
 				<Button variant="primary" onClick={this.handleShow}>
 					Checkout
         </Button>
-
 				<Modal show={this.state.show} onHide={this.handleClose}>
 					<Modal.Header closeButton>
 						<Modal.Title>Checkout</Modal.Title>
