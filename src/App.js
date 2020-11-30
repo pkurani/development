@@ -3,6 +3,8 @@ import FilteredList from "./FilteredList.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  /* List of Products used */
   const productList = [
           {type: "Sedan", price: 30000, brand: "BMW", model:"3 Series", imgID: "/images/BMW_3_Series.png" , cartID: 0, description: "A sleek, stylish car for all your personal and buisness needs"},
           {type: "Sedan", price: 20000, brand: "Honda",  model:"Civic", imgID:"/images/Honda_Civic.png" , cartID: 1, description: "Afforable sedan for those looking for a new upgrade"},
@@ -24,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* FilteredList rendered here with ProductList passed in*/}
   		<FilteredList list={productList} />
   	</div>
 

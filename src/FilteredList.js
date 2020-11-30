@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 class FilteredList extends Component {
+
   constructor(props) {
     super(props);
     this.updateCart = this.updateCart.bind(this);
@@ -16,23 +17,26 @@ class FilteredList extends Component {
     this.onSelectCarBrand = this.onSelectCarBrand.bind(this);
     this.onSelectSorted = this.onSelectSorted.bind(this);
 
+    /*All states that are used to accurately render page*/
     this.state = {
       type: "Select Car Type",
       brand: "Select Car Brand",
       sorted: "Sort By",
-      cart: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      cart: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], /* Each index corresponds to every products "cartID" */
       cartTotal: 0
     };
   }
 
+
+  /* Sets state based on Car type */
   onSelectFilterSize = event => {
   	this.setState({
   		type: event
   	})
   };
 
+  /*Returns True or false based on whether the car matches the type in state */
   matchesFilterSize = item => {
-	   // all items should be shown when no filter is selected
   	if(this.state.type === "All" || this.state.type === "Select Car Type") {
   		return true
   	} else if (this.state.type === item.type) {
@@ -42,14 +46,15 @@ class FilteredList extends Component {
   	}
   }
 
+  /* Sets state based on Car Brand */
   onSelectCarBrand = event => {
   	this.setState({
   		brand: event
   	})
   };
 
+  /*Returns True or false based on whether the car matches the Brand in state */
   matchesCarBrand = item => {
-	   // all items should be shown when no filter is selected
   	if(this.state.brand === "All" || this.state.brand === "Select Car Brand") {
   		return true
   	} else if (this.state.brand === item.brand) {
@@ -59,12 +64,14 @@ class FilteredList extends Component {
   	}
   }
 
+  /* Sets order in which cars should be sorted */
   onSelectSorted = event => {
   	this.setState({
   		sorted: event
   	})
   };
 
+  /* Function that sorts cars based on state */
   sortBy(list, currState){
     if (currState === "Price Low to High"){
       return list.sort((a, b) => {
@@ -79,6 +86,9 @@ class FilteredList extends Component {
     }
   }
 
+  /* Updates cart based on call. Index refers to cart's index, addOrRemove refers to
+  whether the user would like to add or remove, and removeAll indicates whether the user
+  would like to remove all the instances of the particular product from the cart */
   updateCart(index, addOrRemove, removeAll){
     console.log(this.state.cart);
     if (addOrRemove === 0 && this.state.cart[index] > 0){
@@ -121,7 +131,7 @@ class FilteredList extends Component {
         )
   }
 }
-
+{/* Responsible for rendering NavBar on top with the desired filtering/sorting options */}
 class TopHeaderBar extends Component {
   render() {
     return(

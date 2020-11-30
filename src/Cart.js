@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
 
-
+/* Here, the cart is rendered */
 class Cart extends Component {
   render() {
     return(
@@ -20,15 +20,18 @@ class Cart extends Component {
             </div>
             <p className="mb-1">{item.description}</p>
             <div className="d-flex justify-content-center">
+              {/* Remove Elements from Cart*/}
               <Button onClick={() => this.props.updateCart(item.cartID,0, false)}>
                 -
               </Button>
               <div id="quantity">{this.props.cart[item.cartID]}</div>
+              {/* Add Elements to Cart*/}
               <Button onClick={() => this.props.updateCart(item.cartID,1, false)}>
                 +
               </Button>
             </div>
             <div className="d-flex justify-content-center" id="removeFromCart">
+              {/* Remove all instances of car from cart*/}
               <Button onClick={() => this.props.updateCart(item.cartID,0, true)}>
                 Remove From Cart
               </Button>
@@ -59,14 +62,17 @@ class CheckoutButton extends Component {
 		};
 	}
 
+  /* Modal is not rendered */
 	handleClose() {
 		this.setState({ show: false });
 	}
 
+  /* Modal is rendered */
 	handleShow() {
 		this.setState({ show: true });
 	}
 
+  /* Responsible for rendering contents of modal */
   displayText(total){
     if (total > 0){
       return "Thank you for buying cars from our site! Your total is: $" + total.toString();

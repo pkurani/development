@@ -11,8 +11,8 @@ import Cart from "./Cart.js"
 class DisplayList extends Component {
   render() {
     return ((this.props.list.length == 0) ?
-
     (<div id="productandcard">
+    {/* If total list == 0, indicate that no cars match the selected filters while rendering the cart as well */}
       <Row>
         <Col xs={8}><p> No cars match the filters selected. </p></Col>
         <Col xs={4}><Cart allCars={this.props.allCars} updateCart={this.props.updateCart} cart={this.props.cart} total={this.props.total}/></Col>
@@ -30,10 +30,12 @@ class DisplayList extends Component {
   };
 }
 
+/* ProductDisplay renders all products based on filters/sorters */
 class ProductDisplay extends Component {
   render() {
     return(
       <div className="row">
+        {/* Renders each card here */}
         {this.props.list.map(item =>
           <div className="col-md-6 col-lg-4" key={item.imgID} id="carCard">
         <Card>
