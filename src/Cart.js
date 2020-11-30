@@ -47,7 +47,7 @@ class Cart extends Component {
   };
 }
 
-class CheckoutButton extends React.Component {
+class CheckoutButton extends Component {
 	constructor(props, context) {
 		super(props, context);
 

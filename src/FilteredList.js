@@ -8,11 +8,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-
-
-//import Button from 'react-bootstrap/Button';
-
-class FilteredList extends React.Component {
+class FilteredList extends Component {
   constructor(props) {
     super(props);
     this.updateCart = this.updateCart.bind(this);
